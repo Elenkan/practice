@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<!-- (c) Digital Element || https://d-element.ru/ -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список страниц</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link href="styles/main.css" rel="stylesheet"></head>
+<body>
+
+<div class="flow-container ">
+    <header class="header">
+
+    </header>
+    <div class="content">
+
+<main class="page-content">
+    <h1 class="page-content__title">Практическое обучение и экзаменация по front-end</h1>
+    <section class="range-slider">
+        <h2 class="range-slider__title section-title">Бегунок</h2>
+        <div class="main-range-slider"></div>
+    </section>
+    <section class="image-slider">
+        <h2 class="image-slider__title section-title">Слайдер</h2>
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./images/technician-img.png" alt="Картинка техника" width="615"
+                                              height="300"></li>
+                <li class="swiper-slide"><img src="./images/chip-img.png" alt="Картинка микросхемы" width="615"
+                                              height="300"></li>
+                <li class="swiper-slide"><img src="./images/quadcopter-img.png" alt="Картинка квадрокоптера" width="615"
+                                              height="300"></li>
+            </ul>
+            <div class="swiper-container__wrapper">
+                <div class="slider-info">
+                    <div class="slider-info__selected-item">Выбранный слайд:<span class="result"> 01</span></div>
+                    <div class="slider-info__total">Всего слайдов:<span class="result-total"></span></div>
+                </div>
+                <ul class="swiper-button-list">
+                    <li class="swiper-button-prev swiper-button-list__item">
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-prev-arrow"></use>
+                        </svg>
+                    </li>
+                    <li class="swiper-button-next swiper-button-list__item ">
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-next-arrow"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="map-wrapper">
+        <h2 class="map-wrapper__title section-title">Карта</h2>
+        <div id="map" data-coords="[[55.7522200,  37.6155600], [55.766989, 37.681230], [55.7195494, 37.591265]]">
+        </div>
+    </section>
+    <section class="popup">
+        <h2 class="popup__title section-title">Кнопка с модальным окном</h2>
+        <a href="#modal-info" class="popup__button popup-modal">Открыть модальное окно</a>
+    </section>
+    <section class="page-form">
+        <h2 class="page-form__title section-title">Форма</h2>
+        <form class="form" autocomplete="off" data-form novalidate>
+            <div class="form__personal-data">
+                <label class="form__label" for="form__user-phone">Ваш телефон</label>
+                <input type="text"
+                       id="form__user-phone"
+                       name="user-phone"
+                       class="form__input inputmask" required data-input-required="phone"
+                       placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+            </div>
+            <div class="form__personal-data">
+                <label class="form__label" for="form__user-name">Ваша фамилия</label>
+                <input type="text" id="form__user-name" name="user-name" class="form__input form__input--name"
+                       placeholder="Ваша фамилия" data-input-required="name">
+            </div>
+            <div class="form__personal-data">
+                <label class="form__label" for="form__user-comment">Комментарий<span> &#8432;</span></label>
+                <textarea class="form__input form__input--comment" id="form__user-comment" name="user-comment"
+                          placeholder="Комментарий" required data-input-required></textarea>
+            </div>
+            <div class="form__personal-agreement">
+                <label class="form-checkbox checkbox">
+                    <input class="checkbox__input " type="checkbox" value="Y" name="pers" tabindex="-1" required
+                           data-input-required="checkbox">
+                    <span class="form-checkbox__sign checkbox__emulator">
+                            <svg class="checkbox__icon i-icon">
+                                <use xlink:href="#icon-check"></use>
+                            </svg>
+                        </span>
+                    <span class="form-checkbox__text checkbox__label">
+                            Согласен на обработку <a href="">персональных данных</a>
+                        </span>
+                </label>
+            </div>
+            <button class="form__button" type="submit">Отправить форму</button>
+        </form>
+    </section>
+</main>
+
+        </div>
+        <footer class="footer">
+        </footer>
+        </div>
+        <div class="modal modal--feedback" id="modal-feedback">
+    <div class="modal__top">
+        <div class="modal__heading h1">
+            Обратная связь
+        </div>
+        <div class="modal__subheading">
+            заполните форму обратной связи и мы обязательно с вами свяжемся
+        </div>
+    </div>
+    <div class="modal__body">
+        <form class="modal__form form" data-form novalidate>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">Ваше имя</label>
+                    <input type="text" class="form-input" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">Контактный телефон</label>
+                    <input type="text" class="form-input inputmask" required data-input-required="phone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">Электронная почта</label>
+                    <input type="email" class="form-input" required data-input-required="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label for="">Текст вопроса</label>
+                    <textarea class="form-input" name="" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="file-attacher" data-file-attacher>
+                        <input id="file-attacher-1" class="file-attacher__input" type="file" name="files" data-file-attacher-input>
+
+                        <div class="file-attacher__btn">
+                            <label for="file-attacher-1" data-file-attacher-add-btn>
+                                Прикрепить файл
+                            </label>
+                        </div>
+
+                        <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <div class="file-attacher" data-file-attacher>
+                        <input id="file-attacher-2" class="file-attacher__input" type="file" name="files_multiple" multiple data-file-attacher-input>
+
+                        <div class="file-attacher__btn">
+                            <label for="file-attacher-2" data-file-attacher-add-btn>
+                                Прикрепить файл (multiple)
+                            </label>
+                        </div>
+
+                        <ul class="file-attacher__list" data-file-attacher-file-list></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-col">
+                    <label class="checkbox">
+                        <input class="checkbox__input" type="checkbox" value="Y" name="pers" tabindex="-1" required data-input-required="checkbox">
+                        <span class="checkbox__emulator">
+                            <svg class="checkbox__icon i-icon">
+                                <use xlink:href="#icon-check"></use>
+                            </svg>
+                        </span>
+                        <span class="checkbox__label">
+                            Согласен на обработку <a href="">персональных данных</a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-row form-row--confirm">
+                <div class="form-col">
+                    <button>Оставить заявку</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal modal--success" id="modal-success">
+    <div class="modal__top">
+        <div class="modal__heading h1">
+            Заявка отправлена
+        </div>
+        <div class="modal__subheading">
+            Спасибо за обращение! Мы обязательно свяжемся с вами.
+        </div>
+    </div>
+</div>
+<div class="modal modal--error" id="modal-error">
+    <div class="modal__top">
+        <div class="modal__heading h1">
+            Произошла ошибка!
+        </div>
+        <div class="modal__subheading">
+            Попытайтесь позже
+        </div>
+    </div>
+</div>
+<div class="popup-info" id="modal-info">
+    <h1 class="popup-info__main-title section-title">Поп-ап</h1>
+    <p class="popup-info__title">Выбранные значения:</p>
+    <div class="popup-info__minimum">Минимум:<span></span></div>
+    <div class="popup-info__maximum">Максимум:<span></span></div>
+    <p class="popup-info__title">Выбранная метка:</p>
+    <div class="popup-info__coordinate">Координаты:<span></span></div>
+</div>
+        <div class="overlay"></div>
+        <div class="loader">
+            <div></div>
+        </div>
+        <script src="https://api-maps.yandex.ru/2.1?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+        </script>
+    <script type="text/javascript" src="bundle.js"></script></body>
+</html>
